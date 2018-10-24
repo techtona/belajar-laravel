@@ -18,3 +18,10 @@ Route::get('/', function () {
 Route::get('test', function(){
 	return view('test');
 });
+
+Route::get('test_db','CustomerController@index');
+
+
+
+
+Route::get('customer','CustomerController@customer');
