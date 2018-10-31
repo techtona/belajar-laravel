@@ -74,18 +74,20 @@ class CustomerController extends Controller
 
         // gunakana function create dengan Eloquent
 
-        $data = [
-            "store_id" => $request->store_id,
-            "first_name" => $request->first_name,
-            "last_name" => $request->last_name,
-            "email" => $request->email,
-            "address_id" => $request->address_id,
-            "active" => $request->active
-        ];
+        // $data = [
+        //     "store_id" => $request->store_id,
+        //     "first_name" => $request->first_name,
+        //     "last_name" => $request->last_name,
+        //     "email" => $request->email,
+        //     "address_id" => $request->address_id,
+        //     "active" => $request->active
+        // ];
 
-        Customer::create($data);
+        // Customer::create($data);
 
-        return "data berhasil disimpan";
+        // return "data berhasil disimpan";
+
+        return view('customer.tambah_customer');
     }
 
     public function update_customer(Request $request, $id)
@@ -108,5 +110,22 @@ class CustomerController extends Controller
 
 
         return "berhasil update data";
+    }
+
+    public function post_tambah_customer(Request $request)
+    {
+        $data = [
+            "store_id"      => $request->store_id,
+            "first_name"    => $request->first_name,
+            "last_name"     => $request->last_name,
+            "email"         => $request->email,
+            "address_id"    => $request->address_id,
+            "active"        => $request->active
+        ];
+        // dd($data);
+
+        Customer::create($data);   
+
+        return redirect()->back()->with('success','Berhasil menyimpan data Customer');
     }
 }

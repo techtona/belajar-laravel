@@ -30,6 +30,7 @@ Route::get('customer', 'CustomerController@customer_join');
 
 /* insert data */
 Route::get('tambah_customer','CustomerController@tambah_customer');
+Route::post('tambah_customer','CustomerController@post_tambah_customer');
 
 /* update data */
 Route::get('update_customer/{id}','CustomerController@update_customer');
