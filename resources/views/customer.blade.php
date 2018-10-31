@@ -11,16 +11,16 @@
 					<table class="table">
 						<thead>
 							<tr>
-								<th>Nama Depan</th>
-								<th>Nama Belakang</th>
+								<th>Nama </th>
+								<th>Store Manager ID</th>
 								<th>Email</th>
 							</tr>
 						</thead>
 						<tbody>
 							@foreach($customer as $data)
 								<tr>
-									<td>{{$data->first_name}}</td>
-									<td>{{$data->last_name}}</td>
+									<td>{{$data->first_name}} {{$data->last_name}}</td>
+									<td>{{$data->store->manager_staff_id}}</td>
 									<td>{{$data->email}}</td>
 								</tr>
 							@endforeach

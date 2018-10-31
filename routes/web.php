@@ -20,8 +20,16 @@ Route::get('test', function(){
 });
 
 Route::get('test_db','CustomerController@index');
+// Route::get('customer','CustomerController@customer');
 
+/*
+join query builder
+*/
+/* select & join */
+Route::get('customer', 'CustomerController@customer_join');
 
+/* insert data */
+Route::get('tambah_customer','CustomerController@tambah_customer');
 
-
-Route::get('customer','CustomerController@customer');
+/* update data */
+Route::get('update_customer/{id}','CustomerController@update_customer');
