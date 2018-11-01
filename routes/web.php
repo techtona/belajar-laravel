@@ -26,7 +26,7 @@ Route::get('test_db','CustomerController@index');
 join query builder
 */
 /* select & join */
-Route::get('customer', 'CustomerController@customer_join');
+Route::get('customer', 'CustomerController@customer_join')->name('customer');
 
 /* insert data */
 Route::get('tambah_customer','CustomerController@tambah_customer');

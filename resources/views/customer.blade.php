@@ -34,6 +34,7 @@
 							@endforeach
 						</tbody>
 					</table>
+					{!! $customer->render() !!}
 				</div>
 			</div>
 		</div>

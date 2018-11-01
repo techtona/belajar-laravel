@@ -48,7 +48,7 @@ class CustomerController extends Controller
         */
 
         /* Eloquent Relationship */
-        $data['customer']  = Customer::limit(10)->get();
+        $data['customer']  = Customer::paginate(10);
 
         // dd($data['customer']->store);
 
