@@ -34,3 +34,4 @@ Route::post('tambah_customer','CustomerController@post_tambah_customer');
 
 /* update data */
 Route::get('update_customer/{id}','CustomerController@update_customer');
+
